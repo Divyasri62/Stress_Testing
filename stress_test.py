@@ -1,7 +1,19 @@
 import os
 import psutil
+import smtplib
 
-Threshold = 80 
+Threshold = 80
+
+def send_email_notification(message):
+    # Replace with your email settings
+    sender_email = "divyasril2003@gmail.com"
+    receiver_email = "divyasril2003@gmail.com"
+    password = "Divyasrilalam@2003"
+
+    with smtplib.SMTP("smtp.example.com", 587) as server:
+        server.starttls()
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, message) 
 
 # Stress test functions
 def memory_stress_test():
