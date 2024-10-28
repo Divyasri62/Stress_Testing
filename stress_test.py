@@ -4,7 +4,7 @@ import smtplib
 import time
 import sys
 
-THRESHOLD = 80   #set threshold
+THRESHOLD = 80
 
 def send_email_notification(subject, message):
     sender_email = "divyasril2003@gmail.com"
